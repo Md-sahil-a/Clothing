@@ -1,4 +1,5 @@
 import './style.scss'
+import Category from './components/category-items/categoryContainer';
 
 function App() {
   const productData = [
@@ -31,21 +32,10 @@ function App() {
   return (
     <div className="categories-container">
     {
-      productData.map(({title,id, imageUrl}) =>(
-        
-        <div key={id} className="category-container">
-        <div className="background-image" style={{
-          backgroundImage: `url(${imageUrl})`
-        }} >
-        </div>
-        <div className="category-body-container">
-        <h1>{title}</h1>
-        <p>Shop Now</p>
-        </div>
-        </div>
-  
+      productData.map((category) =>(
+        <Category key ={category.id} Category ={category} />
       ))
-    }
+    };
     </div>
   );
 }
