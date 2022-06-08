@@ -1,3 +1,4 @@
+import './style.scss'
 
 function App() {
   const productData = [
@@ -24,17 +25,19 @@ function App() {
 
   ]
   return (
-    <div>
+    <div className="categories-container">
     {
-      productData.map(({title}) =>{
-        return <div>
-        <div>
+      productData.map(({title,id}) =>{
+        return <div className="check">
+        <div key={id} className="category-container" >
+        <div className="category-body-container">
         <h1>
         {title}
         </h1>
         <p>
         Shop Now
         </p>
+        </div>
         </div>
         
         </div>
