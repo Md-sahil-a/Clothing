@@ -1,5 +1,5 @@
-import './style.scss'
-import Category from './components/category-items/categoryContainer';
+
+import MainCont from './components/mainCategory/mainCategory.component';
 
 function App() {
   const productData = [
@@ -30,13 +30,7 @@ function App() {
     }
   ]
   return (
-    <div className="categories-container">
-    {
-      productData.map((category) =>(
-        <Category key ={category.id} Category ={category} />
-      ))
-    };
-    </div>
+    <MainCont productData={productData}/>
   );
 }
 
