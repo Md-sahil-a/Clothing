@@ -1,4 +1,5 @@
 import MainCont  from "../../mainCategory/mainCategory.component";
+import { Outlet } from "react-router-dom";
 
 const Home = ()=>{
 
@@ -30,7 +31,11 @@ const Home = ()=>{
         }
       ]
       return (
+        <div>
         <MainCont productData={productData}/>
+        <Outlet/>
+        </div>
+        
       );
 
 
