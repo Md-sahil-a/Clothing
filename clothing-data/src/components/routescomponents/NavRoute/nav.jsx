@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 const Nav = ()=>{
@@ -8,6 +8,9 @@ const Nav = ()=>{
       <h1>
       This is Navigation bar.
       </h1>
+      <Link to="/shop">
+      Home
+      </Link>
       </div>
       <Outlet/>
       </div>
