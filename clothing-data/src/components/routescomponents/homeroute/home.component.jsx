@@ -7,7 +7,7 @@ const Home = ()=>{
         {
           "id": 1,
           "title": "hats",
-          "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+          "imageUrl": "https://user-images.githubusercontent.com/77974484/173227879-69fb96b1-5947-4423-867c-f77b87439563.jpeg"
         },
         {
           "id": 2,
@@ -31,10 +31,10 @@ const Home = ()=>{
         }
       ]
       return (
-        <div>
+        <>
         <MainCont productData={productData}/>
         <Outlet/>
-        </div>
+        </>
         
       );
 
