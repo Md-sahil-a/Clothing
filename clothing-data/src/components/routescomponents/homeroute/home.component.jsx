@@ -22,12 +22,12 @@ const Home = ()=>{
         {
           "id": 4,
           "title": "womens",
-          "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+          "imageUrl": "https://www.jewelryshoppingguide.com/wp-content/uploads/2019/08/types-of-indian-jewelry-and-how-to-wear-them.jpeg"
         },
         {
           "id": 5,
           "title": "mens",
-          "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+          "imageUrl": "https://tamil.samayam.com/photo/msid-91485197,imgsize-27712/pic.jpg"
         }
       ]
       return (
