@@ -1,6 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect} from "firebase/auth";
+import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 const firebaseConfig = {
   apiKey: "AIzaSyCsM1fhkexC_q-hrAAZrMo0DMq0lA6H-uA",
   authDomain: "clothing-843a1.firebaseapp.com",
@@ -24,3 +25,8 @@ provider.setCustomParameters({
 export const auth = getAuth();
 export const signInWithGooglePopup = ()=> signInWithPopup(auth, provider);
 
+export const db  = getFirestore();
+export const createUserdatafromAuth = async (userAuth)=>{
+  const userRef = doc(db, "users", userAuth.uid);
+  console.log(userRef);
+}
