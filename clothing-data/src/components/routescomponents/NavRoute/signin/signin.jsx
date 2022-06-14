@@ -1,5 +1,6 @@
-import { signInWithGooglePopup, createrUserFromAuth } from "../../../../utils/firebase/firebase.components"
+import { signInWithGooglePopup, createrUserFromAuth, auth, signInWithGoogleRedirect } from "../../../../utils/firebase/firebase.components"
 
+import EmailLSignup from "../../../Signin-with-mail/signinwithform";
 
 
 const Sign = ()=>{
@@ -13,9 +14,9 @@ const Sign = ()=>{
         Sign in Page
         </h1>
         <button onClick={ handlepopupSignin }>
-        Sign With Google
+        Sign With Google Pop Up
         </button>
-        
+        <EmailLSignup/>
         </div>
 
     )

@@ -12,12 +12,12 @@ const Home = ()=>{
         {
           "id": 2,
           "title": "jackets",
-          "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+          "imageUrl": "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2021/03/BeFunky-collage-14-scaled.jpg"
         },
         {
           "id": 3,
           "title": "sneakers",
-          "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+          "imageUrl": "https://11pt5z46nuudt9qxx2knwgff-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Moda_Sneakers_24.jpg"
         },
         {
           "id": 4,
