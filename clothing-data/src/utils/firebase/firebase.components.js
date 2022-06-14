@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect} from "firebase/auth";
+import {getAuth, GoogleAuthProvider, signInWithPopup,createUserWithEmailAndPassword } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 const firebaseConfig = {
   apiKey: "AIzaSyCsM1fhkexC_q-hrAAZrMo0DMq0lA6H-uA",
@@ -24,7 +24,6 @@ provider.setCustomParameters({
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
-export const signInWithGoogleRedirect = ()=> signInWithRedirect(auth, provider);
 
 export const db = getFirestore();
 
@@ -54,3 +53,8 @@ export const createrUserFromAuth = async (userAuth)=>{
  //create / set the document with the data  from userAuth in my collection
 //if user exists
  // return user Doc ref 
+
+export const CreateUserWithEmail = async(email, password)=>{
+  if(!email || password) return;
+  return await createUserWithEmailAndPassword(email, password);
+ }

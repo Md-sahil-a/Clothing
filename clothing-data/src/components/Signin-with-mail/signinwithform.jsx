@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { CreateUserWithEmail } from "../../utils/firebase/firebase.components";
 
 const defaultFormFields = {
     displayName: "",
@@ -15,6 +16,10 @@ const EmailLSignup = ()=>{
     const handleChange = (event) =>{
         const {name, value} = event.target;
         setFields({...Fields, [name]: value});
+    }
+    const handleSubmit= async (event)=>{
+        event.preventDefault();
+
     }
 
     return (
