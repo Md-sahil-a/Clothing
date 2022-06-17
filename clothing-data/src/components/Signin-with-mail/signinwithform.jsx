@@ -20,6 +20,7 @@ const EmailLSignup = ()=>{
 
     const handleSubmit = async (event)=>{
         event.preventDefault();
+
         if(password !== ConfirmPassword){
             alert("Wrong PassWord");
             return;
@@ -55,4 +56,4 @@ const EmailLSignup = ()=>{
     )
 }
 
-export default EmailLSignup
+export default EmailLSignup;
