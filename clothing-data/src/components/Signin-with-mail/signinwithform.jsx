@@ -17,17 +17,22 @@ const EmailLSignup = ()=>{
         const {name, value} = event.target;
         setFields({...Fields, [name]: value});
     }
+    const resetFormField = ()=>{
+        setFields(defaultFormFields);
+    }
 
     const handleSubmit = async (event)=>{
         event.preventDefault();
 
         if(password !== ConfirmPassword){
             alert("Wrong PassWord");
+
             return;
         }
         try{
             const {user} = await CreateAuthWithEmail(email, password)
             await createrUserFromAuth(user, {displayName});
+            resetFormField();
         }catch(error){
             if(error.code === 'auth/email-already-in-use'){
                 alert("Email is already in use");
