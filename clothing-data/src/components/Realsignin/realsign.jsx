@@ -6,6 +6,7 @@ import "../button/btn.styles.scss";
 import {
   signInWithGooglePopup,
   createrUserFromAuth,
+  Signinwithmail,
 } from "../../utils/firebase/firebase.components.js";
 
 const defaultFormFields = {
@@ -30,11 +31,24 @@ const EmaiLSignin = () => {
     createrUserFromAuth(user);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      const response = await Signinwithmail(email, password);
+      console.log(response);
       resetFormField();
-    } catch (error) {}
+    } catch (error) {
+      switch (error.code) {
+        case "auth/wrong-password":
+          alert("Password is incorrect");
+          break;
+        case "auth/user-not-found":
+          alert("User not registered with this email");
+          break;
+        default:
+          console.log(error);
+      }
+    }
   };
 
   return (
@@ -58,8 +72,12 @@ const EmaiLSignin = () => {
           value={password}
           onChange={handleChange}
         />
-        <Button type="submit">SigIn</Button>
-        <Button onClick={SignInWithGoogle}> Google SignIn</Button>
+        <div className="btn-container">
+          <Button type="submit">SigIn</Button>
+          <Button type="button" buttonTypes="google" onClick={SignInWithGoogle}>
+            Google SignIn
+          </Button>
+        </div>
       </form>
     </div>
   );
