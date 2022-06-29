@@ -8,6 +8,8 @@ import {
   createrUserFromAuth,
   Signinwithmail,
 } from "../../utils/firebase/firebase.components.js";
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
 
 const defaultFormFields = {
   email: "",
@@ -17,6 +19,7 @@ const defaultFormFields = {
 const EmaiLSignin = () => {
   const [Fields, setFields] = useState(defaultFormFields);
   const { email, password } = Fields;
+  const { setCurrentUser } = useContext(userContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,8 +37,9 @@ const EmaiLSignin = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await Signinwithmail(email, password);
-      console.log(response);
+      const { user } = await Signinwithmail(email, password);
+      setCurrentUser(user);
+
       resetFormField();
     } catch (error) {
       switch (error.code) {
