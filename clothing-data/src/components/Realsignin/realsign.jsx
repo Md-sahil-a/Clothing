@@ -9,7 +9,7 @@ import {
   Signinwithmail,
 } from "../../utils/firebase/firebase.components.js";
 import { useContext } from "react";
-import { userContext } from "../context/userContext";
+import { UserContext } from "../context/userContext";
 
 const defaultFormFields = {
   email: "",
@@ -19,7 +19,7 @@ const defaultFormFields = {
 const EmaiLSignin = () => {
   const [Fields, setFields] = useState(defaultFormFields);
   const { email, password } = Fields;
-  const { setCurrentUser } = useContext(userContext);
+  const { setCurrentUser } = useContext(UserContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;

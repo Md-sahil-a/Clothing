@@ -1,44 +1,45 @@
-import MainCont  from "../../mainCategory/mainCategory.component";
+import MainCont from "../../mainCategory/mainCategory.component";
 import { Outlet } from "react-router-dom";
 
-const Home = ()=>{
+const Home = () => {
+  const productData = [
+    {
+      id: 1,
+      title: "hats",
+      imageUrl:
+        "https://user-images.githubusercontent.com/77974484/173227879-69fb96b1-5947-4423-867c-f77b87439563.jpeg",
+    },
+    {
+      id: 2,
+      title: "jackets",
+      imageUrl:
+        "https://user-images.githubusercontent.com/77974484/176375451-d2e722e4-855f-4d8a-a4c6-025c00893747.jpeg",
+    },
+    {
+      id: 3,
+      title: "sneakers",
+      imageUrl:
+        "https://11pt5z46nuudt9qxx2knwgff-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Moda_Sneakers_24.jpg",
+    },
+    {
+      id: 4,
+      title: "womens",
+      imageUrl:
+        "https://www.jewelryshoppingguide.com/wp-content/uploads/2019/08/types-of-indian-jewelry-and-how-to-wear-them.jpeg",
+    },
+    {
+      id: 5,
+      title: "mens",
+      imageUrl:
+        "https://tamil.samayam.com/photo/msid-91485197,imgsize-27712/pic.jpg",
+    },
+  ];
+  return (
+    <>
+      <MainCont productData={productData} />
+      <Outlet />
+    </>
+  );
+};
 
-    const productData = [
-        {
-          "id": 1,
-          "title": "hats",
-          "imageUrl": "https://user-images.githubusercontent.com/77974484/173227879-69fb96b1-5947-4423-867c-f77b87439563.jpeg"
-        },
-        {
-          "id": 2,
-          "title": "jackets",
-          "imageUrl": "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2021/03/BeFunky-collage-14-scaled.jpg"
-        },
-        {
-          "id": 3,
-          "title": "sneakers",
-          "imageUrl": "https://11pt5z46nuudt9qxx2knwgff-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Moda_Sneakers_24.jpg"
-        },
-        {
-          "id": 4,
-          "title": "womens",
-          "imageUrl": "https://www.jewelryshoppingguide.com/wp-content/uploads/2019/08/types-of-indian-jewelry-and-how-to-wear-them.jpeg"
-        },
-        {
-          "id": 5,
-          "title": "mens",
-          "imageUrl": "https://tamil.samayam.com/photo/msid-91485197,imgsize-27712/pic.jpg"
-        }
-      ]
-      return (
-        <>
-        <MainCont productData={productData}/>
-        <Outlet/>
-        </>
-        
-      );
-
-
-}
-
-export default Home
+export default Home;
