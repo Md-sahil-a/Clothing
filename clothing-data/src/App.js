@@ -4,6 +4,7 @@ import Home from "./components/routescomponents/homeroute/home.component";
 import Nav from './components/routescomponents/NavRoute/nav';
 import Sign from './components/routescomponents/NavRoute/signin/signin';
 
+//observer pattern
 
 
 function Shop(){
