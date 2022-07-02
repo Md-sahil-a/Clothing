@@ -5,11 +5,8 @@ import Button from "../button/btn-component.jsx";
 import "../button/btn.styles.scss";
 import {
   signInWithGooglePopup,
-  createrUserFromAuth,
   Signinwithmail,
 } from "../../utils/firebase/firebase.components.js";
-import { useContext } from "react";
-import { UserContext } from "../context/userContext";
 
 const defaultFormFields = {
   email: "",
@@ -19,7 +16,6 @@ const defaultFormFields = {
 const EmaiLSignin = () => {
   const [Fields, setFields] = useState(defaultFormFields);
   const { email, password } = Fields;
-  const { setCurrentUser } = useContext(UserContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -30,15 +26,13 @@ const EmaiLSignin = () => {
   };
 
   const SignInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    createrUserFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { user } = await Signinwithmail(email, password);
-      setCurrentUser(user);
+      await Signinwithmail(email, password);
 
       resetFormField();
     } catch (error) {
