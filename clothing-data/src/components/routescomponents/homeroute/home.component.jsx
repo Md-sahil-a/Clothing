@@ -13,7 +13,7 @@ const Home = () => {
       id: 2,
       title: "jackets",
       imageUrl:
-        "https://user-images.githubusercontent.com/77974484/176375451-d2e722e4-855f-4d8a-a4c6-025c00893747.jpeg",
+        "",
     },
     {
       id: 3,
