@@ -4,14 +4,19 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-    background-color: black;
+    background-color: rgba(42, 185, 6, 0.267);
 
-  
-    .logo-container {
-      height: 100%;
-      width: 70px;
-      padding: 25px;
-    }
+  .logo-container{
+    padding: 1px;
+  }
+  .logo{
+    color: black;
+    font-size: 1.5rem;
+  }
+  .sub-logo{
+    color: black;
+    margin-top: -18px;
+  }
   
     .nav-links-container {
       width: 50%;
@@ -26,4 +31,5 @@
         color: white;
       }
     }
+    
   }
