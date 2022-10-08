@@ -1,5 +1,5 @@
 # Clothing
-Fashion e-commerce website.
+This is an individual project, a clone of ecommerce website of Crown-Clothing.
 
 ![Screenshot from 2022-10-08 17-18-31](https://user-images.githubusercontent.com/77974484/194706836-288e4511-ce16-4e4e-bb58-e0c8c9a8e636.png)
 
