@@ -3,7 +3,8 @@ import { Fragment, useContext } from "react";
 import { ReactComponent as Logo } from "../NavRoute/asset/083 crown.svg";
 import {ReactComponent as LOgo1} from '../../carticon/S_A.svg'
 import DropDown from "../../drop-down/drop-down-component";
-import "./nav.scss";
+// import {NavigationContainer} from './nav.styled'
+import './nav.styled.scss'
 import { UserContext } from "../../context/userContext";
 import { CartContext } from "../../context/cartContext";
 import { signOutUser } from "../../../utils/firebase/firebase.components";
